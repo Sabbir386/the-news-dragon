@@ -6,20 +6,14 @@ import LeftNav from '../pages/Shared/Leftnav/LeftNav';
 import RightNav from '../pages/Shared/RightNav/RightNav';
 import Category from '../pages/Home/category/category';
 import { Outlet } from 'react-router-dom';
-import NavigationBar from '../pages/Shared/NavigationBar/NavigationBar';
 
-const Main = () => {
+const NewsLayouts = () => {
     return (
-        <div className=''>
+        <div>
             <Header></Header>
-            <NavigationBar></NavigationBar>
             <Container>
                 <Row>
-                    <Col lg={3}>
-                        <LeftNav></LeftNav>
-
-                    </Col>
-                    <Col lg={6}>
+                    <Col lg={9}>
                         <Outlet></Outlet>
 
                     </Col>
@@ -37,4 +31,4 @@ const Main = () => {
     );
 };
 
-export default Main;
+export default NewsLayouts;
